@@ -1,14 +1,21 @@
 <template>
-  <h1>Hello App!</h1>
-  <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
-  <nav>
-    <RouterLink to="/">Go to Home</RouterLink>
-    <br />
-    <RouterLink to="/about">Go to About</RouterLink>
-    <br />
-    <RouterLink to="/users">Go to Users</RouterLink>
-  </nav>
-  <main>
-    <RouterView />
-  </main>
+  <app-header v-bind:title="title"> </app-header>
+  <app-nav></app-nav>
+  <RouterView />
 </template>
+
+<script>
+import Header from "@/components/Header.vue";
+import Navbar from "@/components/Navbar.vue";
+export default {
+  components: {
+    "app-header": Header,
+    "app-nav": Navbar,
+  },
+  data() {
+    return {
+      title: "Page Header",
+    };
+  },
+};
+</script>

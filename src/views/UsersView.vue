@@ -1,11 +1,10 @@
 <template>
-  <div>Usersler</div>
+  <h1>Users</h1>
 
   <div v-for="user in users" :key="user.id">
     <router-link v-bind:to="'/users/' + user.id">
       <h2>{{ user.name }}</h2>
     </router-link>
-    <h3>{{ user.username }}</h3>
   </div>
 </template>
 

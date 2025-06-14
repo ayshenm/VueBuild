@@ -1,3 +1,3 @@
 <template>
-  <div>Homepage</div>
+  <h1>About page</h1>
 </template>
