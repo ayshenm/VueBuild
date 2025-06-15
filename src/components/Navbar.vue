@@ -1,9 +1,9 @@
 <template>
-  <nav>
-    <RouterLink to="/">Go to Home</RouterLink>
+  <ul class="navbar-nav mr-auto">
+    <RouterLink to="/" class="nav-link">Go to Home</RouterLink>
     <br />
-    <RouterLink to="/about">Go to About</RouterLink>
+    <RouterLink to="/about" class="nav-link">Go to About</RouterLink>
     <br />
-    <RouterLink to="/users">Go to Users</RouterLink>
-  </nav>
+    <RouterLink to="/users" class="nav-link">Go to Users</RouterLink>
+  </ul>
 </template>

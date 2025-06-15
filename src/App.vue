@@ -1,20 +1,21 @@
 <template>
   <app-header v-bind:title="title"> </app-header>
-  <app-nav></app-nav>
-  <RouterView />
+
+  <div class="container mt-4">
+    <RouterView />
+  </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
-import Navbar from "@/components/Navbar.vue";
+
 export default {
   components: {
     "app-header": Header,
-    "app-nav": Navbar,
   },
   data() {
     return {
-      title: "Page Header",
+      title: "Vue Logo",
     };
   },
 };

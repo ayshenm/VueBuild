@@ -1,6 +1,11 @@
 <template>
-  <h1>{{ user.name }}</h1>
-  <h2>{{ user.email }}</h2>
+  <ul class="list-group mt-4">
+    <li class="list-group-item"><b>Name:</b> {{ user.name }}</li>
+    <li class="list-group-item"><b>Email:</b> {{ user.email }}</li>
+    <li class="list-group-item"><b>Phone:</b> {{ user.phone }}</li>
+    <li class="list-group-item"><b>City:</b> {{ user.address.city }}</li>
+    <li class="list-group-item"><b>Street:</b> {{ user.address.street }}</li>
+  </ul>
 </template>
 
 <script>
