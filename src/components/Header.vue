@@ -1,7 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">{{ title }}</a>
+      <button v-on:click="clickTitle">
+        {{ title }}
+      </button>
       <button
         class="navbar-toggler"
         type="button"
@@ -38,6 +40,11 @@ export default {
   },
   components: {
     "app-nav": Navbar,
+  },
+  methods: {
+    clickTitle: function () {
+      this.$emit("changeTitle", "Page title changed!");
+    },
   },
 };
 </script>
