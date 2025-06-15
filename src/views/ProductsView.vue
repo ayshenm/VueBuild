@@ -1,6 +1,18 @@
 <template>
+  <div class="m-5">
+    <input
+      class="form-control"
+      type="text"
+      placeholder="search product..."
+      v-model="searchProduct" />
+  </div>
+
   <div class="d-flex flex-wrap align-content-lg-between">
-    <div v-for="product in products" :key="product.id" class="card mr-3 mb-3" style="width: 18rem">
+    <div
+      v-for="product in filteredProducts"
+      :key="product.id"
+      class="card mr-3 mb-3"
+      style="width: 18rem">
       <div class="card-body">
         <h2 class="h-5 card-title">
           {{ product.title }}
@@ -28,7 +40,15 @@ export default {
   data() {
     return {
       products: [],
+      searchProduct: "",
     };
+  },
+  computed: {
+    filteredProducts() {
+      return this.products.filter((product) =>
+        product.title.toLowerCase().includes(this.searchProduct.toLowerCase())
+      );
+    },
   },
   created() {
     self = this;
