@@ -4,6 +4,6 @@
     <br />
     <RouterLink to="/about" class="nav-link">Go to About</RouterLink>
     <br />
-    <RouterLink to="/users" class="nav-link">Go to Users</RouterLink>
+    <RouterLink to="/products" class="nav-link">Go to Products</RouterLink>
   </ul>
 </template>
