@@ -1,9 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <button v-on:click="clickTitle">
+    <div class="container text-white">
+      {{ title }}
+      <!-- <button v-on:click="clickTitle">
         {{ title }}
-      </button>
+      </button> -->
       <button
         class="navbar-toggler"
         type="button"
